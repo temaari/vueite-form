@@ -1,25 +1,55 @@
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BasicForm from './components/basicForm.vue'
 
 export default {
-  components: {
-    HelloWorld
-  }
+    components: {
+        BasicForm
+    }
 }
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <hello-world msg="Hello Vue 3 + Vite" />
+    <div class="form">
+        <h3>Basic form</h3>
+        <basic-form />
+    </div>
 </template>
 
 <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    margin-top: 5vh;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+    border: 1px solid black;
+    padding: 1em;
+}
+
+.form-item {
+    display: flex;
+    row-gap: 0.5vh;
+    flex-direction: column;
+    width: 46%;
+}
+
+.form-item
+input {
+    padding-left: 0.4ch;
+    height: 3vh;
+    font-size: 2.3ch;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid black;
 }
 </style>
